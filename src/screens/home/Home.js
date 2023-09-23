@@ -10,16 +10,19 @@ function Home() {
   // on did mount
   useEffect(() => {
     getProductsList();
-    console.log(getProductsList())
+    console.log(getProductsList());
+    document.title = 'Home | Products';
+
   }, []);
 
   const handleChange = (e) => {
     let searchString = e.target.value;
     setSearchString(searchString);
+    handleSearch();
   };
 
   const handleSearch = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     await axiosInstance
      .get(`/products/search?q=${searchString}`)
      .then((res) => {

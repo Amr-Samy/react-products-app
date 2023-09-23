@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import '@fortawesome/fontawesome-svg-core'
 import 'font-awesome/css/font-awesome.min.css';
 
-// TODO 404
 
 function App() {
   return (

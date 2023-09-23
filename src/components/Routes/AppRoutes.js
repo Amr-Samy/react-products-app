@@ -9,7 +9,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path='/productDetails/:id' element={<ProductDetails />}/>
         <Route path='*' element={<NotFoundPage/>}/>
       </Routes>

@@ -13,11 +13,12 @@ function ProductDetails() {
 
   useEffect(() => {
     getProductDetails();
-  }, []);
+    document.title = `${productDetails ? productDetails?.title : "product detais"}`;
+  }, [productDetails]);
 
   let navigate = useNavigate(); 
   const goHome = () =>{ 
-    let path = `/`; 
+    let path = `/home`; 
     navigate(path);
   }
 
