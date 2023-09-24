@@ -1,14 +1,15 @@
+import { Provider } from 'react-redux';
 import './App.css';
 import AppRoutes from './components/Routes/AppRoutes';
 import 'bootstrap/dist/css/bootstrap.css';
-// import '@fortawesome/fontawesome-svg-core'
 import 'font-awesome/css/font-awesome.min.css';
+import { store } from './store/store';
 
 
 function App() {
   return (
     <div className="App">
-      <AppRoutes/>
+      <Provider store={store}> <AppRoutes/> </Provider>
     </div>
   );
 }
